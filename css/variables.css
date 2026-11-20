@@ -1,0 +1,49 @@
+/* ==========================================================================
+   TECNOLOG — Sistema visual
+   Valores extraídos del archivo ECOMMERS MOBILE.fig
+   ========================================================================== */
+
+:root {
+  /* Tipografía */
+  --font-sans: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-emoji: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif;
+
+  /* Colores */
+  --color-ink: #14283e;
+  --color-muted: #748192;
+  --color-primary: #00529b;
+  --color-primary-dark: #004080;
+  --color-white: #ffffff;
+  --color-border: #e3e9f0;
+  --color-surface: #f5f7fa;
+  --color-surface-accent: #edf4fb;
+  --color-home-indicator: #101820;
+  --color-mastercard: #0f52ba;
+  --color-page: #eef2f7;
+
+  /* Medidas de la pantalla */
+  --app-max-width: 440px;
+  --app-min-height: 852px;
+  --app-max-height: 956px;
+  --status-height: 54px;
+  --home-height: 28px;
+  --content-height: 770px;
+
+  /* Radios */
+  --radius-screen: 32px;
+  --radius-16: 16px;
+  --radius-12: 12px;
+  --radius-8: 8px;
+  --radius-5: 5px;
+  --radius-pill: 100px;
+
+  /* Espaciados */
+  --pad-login: 28px;
+  --pad-catalog: 20px;
+  --pad-cart: 24px;
+  --gap-form: 24px;
+  --gap-field: 8px;
+
+  /* Movimiento */
+  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+}

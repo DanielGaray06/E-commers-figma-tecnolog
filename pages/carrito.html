@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Revisa los productos de tu carrito TECNOLOG antes de pagar.">
+  <title>Mi carrito — TECNOLOG</title>
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/pages/carrito.css">
+</head>
+<body class="page page--cart" data-base="../">
+  <div class="app">
+    <header class="status-bar" aria-hidden="true">
+      <span class="status-bar__time">9:41</span>
+      <div class="status-bar__icons">
+        <svg class="status-icon status-icon--signal" focusable="false"><use href="#i-ios-signal"></use></svg>
+        <svg class="status-icon status-icon--wifi" focusable="false"><use href="#i-ios-wifi"></use></svg>
+        <svg class="status-icon status-icon--battery" focusable="false"><use href="#i-ios-battery"></use></svg>
+      </div>
+    </header>
+
+    <main class="cart-content content--scroll" id="main">
+      <section class="cart-products" aria-labelledby="cart-title">
+        <header class="page-header">
+          <a class="page-header__back" href="../index.html" aria-label="Volver al catálogo">
+            <svg class="icon icon-23" aria-hidden="true"><use href="#i-chevron-left"></use></svg>
+          </a>
+          <h1 class="t-title" id="cart-title">Mi carrito</h1>
+          <button class="page-header__action" type="button" data-demo="Las opciones adicionales del carrito no están incluidas en el diseño." aria-label="Más opciones">
+            <svg class="icon icon-21" aria-hidden="true"><use href="#i-more-horizontal"></use></svg>
+          </button>
+        </header>
+
+        <div class="cart-meta">
+          <p class="t-body-12 t-muted" id="cart-count-label" data-cart-count-label>3 artículos en tu bolsa</p>
+          <a class="link t-body-11" href="../index.html">Continuar comprando</a>
+        </div>
+
+        <div class="cart-items" id="cart-items"></div>
+      </section>
+
+      <form class="promo-form" id="promo-form" novalidate>
+        <svg class="icon icon-17 input__icon" aria-hidden="true"><use href="#i-ticket-percent"></use></svg>
+        <input id="promo-input" name="promo" type="text" placeholder="Ingresa el código promocional" aria-label="Código promocional" autocomplete="off">
+        <button class="btn btn-apply" type="submit">Aplicar</button>
+      </form>
+
+      <section class="order-summary" aria-labelledby="summary-title">
+        <h2 class="order-summary__title" id="summary-title">Resumen del pedido</h2>
+
+        <div class="summary-line">
+          <span class="summary-line__label">Subtotal</span>
+          <span class="summary-line__amount" data-subtotal>$77.00</span>
+        </div>
+        <div class="summary-line">
+          <span class="summary-line__label">Envío</span>
+          <span class="summary-line__amount" data-shipping>$4.99</span>
+        </div>
+        <div class="summary-line">
+          <span class="summary-line__label">Impuestos</span>
+          <span class="summary-line__amount" data-tax>$6.16</span>
+        </div>
+
+        <span class="divider"></span>
+
+        <div class="summary-line summary-line--total">
+          <span class="summary-line__label summary-line__label--total">Total</span>
+          <span class="summary-line__amount summary-line__amount--total" data-total>$88.15</span>
+        </div>
+      </section>
+
+      <section class="cart-actions">
+        <p class="delivery-estimate">
+          <svg class="icon icon-14 t-primary" aria-hidden="true"><use href="#i-truck"></use></svg>
+          <span>Entrega estimada: 27–29 oct</span>
+        </p>
+
+        <button class="btn btn-primary" type="button" id="checkout-button">
+          <span>Proceder al pago</span>
+          <svg class="icon icon-18" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+        </button>
+
+        <div class="assurance">
+          <svg class="icon icon-12" aria-hidden="true"><use href="#i-lock-keyhole"></use></svg>
+          <span class="assurance__text">Pago seguro · Cifrado y protegido</span>
+        </div>
+      </section>
+    </main>
+
+    <div class="home-indicator" aria-hidden="true"><span></span></div>
+  </div>
+
+  <script src="../js/modules/icons.js" defer></script>
+  <script src="../js/modules/storage.js" defer></script>
+  <script src="../js/modules/ui.js" defer></script>
+  <script src="../js/navigation.js" defer></script>
+  <script src="../js/main.js" defer></script>
+  <script src="../js/modules/cart.js" defer></script>
+</body>
+</html>

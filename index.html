@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="TECNOLOG — tecnología cotidiana, elevada. Fundas, cargadores, audio y protectores para iPhone.">
+  <title>TECNOLOG — Catálogo</title>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages/productos.css">
+</head>
+<body class="page page--catalog" data-base="">
+  <div class="app">
+    <header class="status-bar" aria-hidden="true">
+      <span class="status-bar__time">9:41</span>
+      <div class="status-bar__icons">
+        <svg class="status-icon status-icon--signal" focusable="false"><use href="#i-ios-signal"></use></svg>
+        <svg class="status-icon status-icon--wifi" focusable="false"><use href="#i-ios-wifi"></use></svg>
+        <svg class="status-icon status-icon--battery" focusable="false"><use href="#i-ios-battery"></use></svg>
+      </div>
+    </header>
+
+    <main class="catalog-feed content--scroll" id="catalog-feed">
+      <section class="greeting-row" aria-label="Saludo y accesos rápidos">
+        <div class="greeting">
+          <h1 class="t-greeting">Hola, <span data-user-name>Alex</span> <span class="t-emoji">👋</span></h1>
+          <button class="delivery" type="button" data-demo="La selección de dirección no está incluida en el diseño.">
+            <svg class="icon icon-12 t-primary" aria-hidden="true"><use href="#i-map-pin"></use></svg>
+            <span class="t-body-11">Entregar en Nueva York, 10013</span>
+            <svg class="icon icon-11" aria-hidden="true"><use href="#i-chevron-down"></use></svg>
+          </button>
+        </div>
+
+        <div class="quick-actions">
+          <button class="icon-btn quick-action" type="button" aria-label="Favoritos" data-favorites-filter>
+            <svg class="icon icon-22" aria-hidden="true"><use href="#i-heart"></use></svg>
+          </button>
+          <a class="cart-shortcut" href="pages/carrito.html" aria-label="Ver carrito">
+            <svg class="icon icon-22" aria-hidden="true"><use href="#i-shopping-bag"></use></svg>
+            <span class="badge cart-badge" data-cart-badge>3</span>
+          </a>
+        </div>
+      </section>
+
+      <form class="search" id="catalog-search" role="search">
+        <svg class="icon icon-18 input__icon" aria-hidden="true"><use href="#i-search"></use></svg>
+        <input type="search" id="search-input" placeholder="Encuentra tu próximo esencial" aria-label="Buscar productos" autocomplete="off">
+        <span class="search__divider" aria-hidden="true"></span>
+        <button class="icon-btn search__filter" type="button" aria-label="Filtros" data-demo="Los filtros avanzados no están incluidos en el diseño.">
+          <svg class="icon icon-19 t-primary" aria-hidden="true"><use href="#i-sliders-horizontal"></use></svg>
+        </button>
+      </form>
+
+      <div class="chips" id="category-chips" role="group" aria-label="Categorías">
+        <button class="chip is-active" type="button" data-category="cases">Fundas</button>
+        <button class="chip" type="button" data-category="chargers">Cargadores</button>
+        <button class="chip" type="button" data-category="protectors">Protectores</button>
+        <button class="chip" type="button" data-category="audio">Audio</button>
+      </div>
+
+      <section class="promo" aria-label="Promoción de accesorios">
+        <img class="promo__image" src="assets/images/promo-everyday.jpg" alt="Funda azul, cargador blanco, cable y auriculares sobre una composición azul claro">
+        <div class="promo__content">
+          <p class="t-eyebrow promo__eyebrow">LA MEJORA COTIDIANA</p>
+          <h2 class="t-h3 promo__title">Pequeños detalles.<br>Gran diferencia.</h2>
+          <button class="promo__link" type="button" data-scroll-to-products>
+            Ver esenciales
+            <svg class="icon icon-12" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+          </button>
+        </div>
+      </section>
+
+      <div class="section-head">
+        <h2 class="t-section">Hecho para tu día a día</h2>
+        <button class="link t-body-11" type="button" data-reset-filter>Ver todo</button>
+      </div>
+
+      <div class="product-grid" id="product-grid">
+        <article class="product-card" data-id="case" data-product-card data-category="cases" data-search="funda de silicona magsafe iphone 16 pro medianoche case">
+          <div class="product-media">
+            <img class="product-media__image" src="assets/images/product-case.jpg" alt="Funda de silicona MagSafe en color medianoche" loading="lazy">
+            <button class="save-btn" type="button" aria-label="Guardar Funda de silicona MagSafe" data-favorite="case">
+              <svg class="icon icon-15" aria-hidden="true"><use href="#i-heart"></use></svg>
+            </button>
+          </div>
+          <div class="product-details">
+            <h3 class="t-body-12 t-bold product-name">Funda de silicona MagSafe</h3>
+            <p class="t-body-10 t-muted product-variant">iPhone 16 Pro · Medianoche</p>
+            <div class="rating-row">
+              <span class="t-price">$29.00</span>
+              <span class="rating">
+                <svg class="icon icon-10 t-primary" aria-hidden="true"><use href="#i-star"></use></svg>
+                <span class="t-body-9 t-muted">4.9 (128)</span>
+              </span>
+            </div>
+          </div>
+          <button class="btn btn-add" type="button" data-add-to-cart="case">
+            <svg class="icon icon-12" aria-hidden="true"><use href="#i-plus"></use></svg>
+            <span>Agregar al carrito</span>
+          </button>
+        </article>
+
+        <article class="product-card" data-id="charger" data-product-card data-category="chargers" data-search="cargador usb-c 30 w carga rapida blanco charger">
+          <div class="product-media">
+            <img class="product-media__image" src="assets/images/product-charger.jpg" alt="Cargador USB-C de 30 W en color blanco" loading="lazy">
+            <button class="save-btn" type="button" aria-label="Guardar Cargador USB-C de 30 W" data-favorite="charger">
+              <svg class="icon icon-15" aria-hidden="true"><use href="#i-heart"></use></svg>
+            </button>
+          </div>
+          <div class="product-details">
+            <h3 class="t-body-12 t-bold product-name">Cargador USB-C de 30 W</h3>
+            <p class="t-body-10 t-muted product-variant">Carga rápida · Blanco</p>
+            <div class="rating-row">
+              <span class="t-price">$24.00</span>
+              <span class="rating">
+                <svg class="icon icon-10 t-primary" aria-hidden="true"><use href="#i-star"></use></svg>
+                <span class="t-body-9 t-muted">4.8 (96)</span>
+              </span>
+            </div>
+          </div>
+          <button class="btn btn-add" type="button" data-add-to-cart="charger">
+            <svg class="icon icon-12" aria-hidden="true"><use href="#i-plus"></use></svg>
+            <span>Agregar al carrito</span>
+          </button>
+        </article>
+
+        <article class="product-card" data-id="earbuds" data-product-card data-category="audio" data-search="auriculares inalambricos air sonido nitido blanco earbuds audio">
+          <div class="product-media">
+            <img class="product-media__image" src="assets/images/product-earbuds.jpg" alt="Auriculares inalámbricos Air con estuche de carga blanco" loading="lazy">
+            <button class="save-btn" type="button" aria-label="Guardar Auriculares inalámbricos Air" data-favorite="earbuds">
+              <svg class="icon icon-15" aria-hidden="true"><use href="#i-heart"></use></svg>
+            </button>
+          </div>
+          <div class="product-details">
+            <h3 class="t-body-12 t-bold product-name">Auriculares inalámbricos Air</h3>
+            <p class="t-body-10 t-muted product-variant">Sonido nítido · Blanco</p>
+            <div class="rating-row">
+              <span class="t-price">$69.00</span>
+              <span class="rating">
+                <svg class="icon icon-10 t-primary" aria-hidden="true"><use href="#i-star"></use></svg>
+                <span class="t-body-9 t-muted">4.9 (84)</span>
+              </span>
+            </div>
+          </div>
+          <button class="btn btn-add" type="button" data-add-to-cart="earbuds">
+            <svg class="icon icon-12" aria-hidden="true"><use href="#i-plus"></use></svg>
+            <span>Agregar al carrito</span>
+          </button>
+        </article>
+
+        <article class="product-card" data-id="glass" data-product-card data-category="protectors" data-search="protector de vidrio edge iphone 16 pro pack de 2 glass screen">
+          <div class="product-media">
+            <img class="product-media__image" src="assets/images/product-glass.jpg" alt="Protector de vidrio Edge para iPhone 16 Pro" loading="lazy">
+            <button class="save-btn" type="button" aria-label="Guardar Protector de vidrio Edge" data-favorite="glass">
+              <svg class="icon icon-15" aria-hidden="true"><use href="#i-heart"></use></svg>
+            </button>
+          </div>
+          <div class="product-details">
+            <h3 class="t-body-12 t-bold product-name">Protector de vidrio Edge</h3>
+            <p class="t-body-10 t-muted product-variant">iPhone 16 Pro · Pack de 2</p>
+            <div class="rating-row">
+              <span class="t-price">$19.00</span>
+              <span class="rating">
+                <svg class="icon icon-10 t-primary" aria-hidden="true"><use href="#i-star"></use></svg>
+                <span class="t-body-9 t-muted">4.8 (62)</span>
+              </span>
+            </div>
+          </div>
+          <button class="btn btn-add" type="button" data-add-to-cart="glass">
+            <svg class="icon icon-12" aria-hidden="true"><use href="#i-plus"></use></svg>
+            <span>Agregar al carrito</span>
+          </button>
+        </article>
+      </div>
+
+      <p class="catalog-empty" id="catalog-empty" hidden>No encontramos productos con esa búsqueda.</p>
+    </main>
+
+    <nav class="bottom-nav" aria-label="Navegación principal">
+      <a class="nav-item is-active" href="index.html" aria-current="page">
+        <svg class="icon icon-21" aria-hidden="true"><use href="#i-house"></use></svg>
+        <span class="t-body-9 t-bold">Inicio</span>
+      </a>
+      <button class="nav-item" type="button" data-scroll-to-categories>
+        <svg class="icon icon-21" aria-hidden="true"><use href="#i-layout-grid"></use></svg>
+        <span class="t-body-9 t-medium">Categorías</span>
+      </button>
+      <button class="nav-item" type="button" data-favorites-filter>
+        <svg class="icon icon-21" aria-hidden="true"><use href="#i-heart"></use></svg>
+        <span class="t-body-9 t-medium">Favoritos</span>
+      </button>
+      <a class="nav-item" href="pages/carrito.html">
+        <svg class="icon icon-21" aria-hidden="true"><use href="#i-shopping-bag"></use></svg>
+        <span class="t-body-9 t-medium">Carrito</span>
+      </a>
+      <button class="nav-item" type="button" data-profile>
+        <svg class="icon icon-21" aria-hidden="true"><use href="#i-user-round"></use></svg>
+        <span class="t-body-9 t-medium">Perfil</span>
+      </button>
+    </nav>
+
+    <div class="home-indicator" aria-hidden="true"><span></span></div>
+  </div>
+
+  <script src="js/modules/icons.js" defer></script>
+  <script src="js/modules/storage.js" defer></script>
+  <script src="js/modules/ui.js" defer></script>
+  <script src="js/navigation.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/modules/catalog.js" defer></script>
+</body>
+</html>

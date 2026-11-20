@@ -1,0 +1,611 @@
+/* ==========================================================================
+   TECNOLOG — Componentes compartidos
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Tipografía
+   -------------------------------------------------------------------------- */
+
+.t-wordmark {
+  font-size: 31px;
+  font-weight: 800;
+  line-height: 38px;
+  letter-spacing: -1.3px;
+  color: var(--color-primary);
+}
+
+.t-wordmark-sm {
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 24px;
+  letter-spacing: -0.8px;
+  color: var(--color-primary);
+}
+
+.t-tagline {
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 12px;
+  letter-spacing: 2.3px;
+  color: var(--color-muted);
+}
+
+.t-eyebrow {
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 12px;
+  letter-spacing: 1.7px;
+  color: var(--color-primary);
+  text-transform: uppercase;
+}
+
+.t-h1 {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 39px;
+  letter-spacing: -1px;
+  color: var(--color-ink);
+}
+
+.t-h2 {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: -1px;
+  color: var(--color-ink);
+}
+
+.t-h3 {
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 24.84px;
+  letter-spacing: -0.7px;
+  color: var(--color-primary-dark);
+}
+
+.t-title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0;
+  color: var(--color-ink);
+}
+
+.t-greeting {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 25px;
+  letter-spacing: -0.6px;
+  color: var(--color-ink);
+}
+
+.t-heading {
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 23px;
+  letter-spacing: -0.4px;
+  color: var(--color-ink);
+}
+
+.t-section {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: -0.4px;
+  color: var(--color-ink);
+}
+
+.t-body {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0;
+}
+
+.t-body-15 {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.t-body-13 {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.t-body-12 {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+}
+
+.t-body-11 {
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 13px;
+}
+
+.t-body-10 {
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12px;
+}
+
+.t-body-9 {
+  font-size: 9px;
+  font-weight: 400;
+  line-height: 11px;
+}
+
+.t-body-8 {
+  font-size: 8px;
+  font-weight: 400;
+  line-height: 10px;
+}
+
+.t-body--relaxed {
+  line-height: 21px;
+}
+
+.t-body-13--relaxed {
+  line-height: 19.5px;
+}
+
+.t-body-11--relaxed {
+  line-height: 17.6px;
+}
+
+.t-label {
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 16px;
+  color: var(--color-ink);
+}
+
+.t-button {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 0;
+}
+
+.t-button-sm {
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 13px;
+}
+
+.t-price {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19px;
+}
+
+.t-price-lg {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 21px;
+}
+
+.t-total {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 27px;
+}
+
+.t-medium { font-weight: 500; }
+.t-semibold { font-weight: 600; }
+.t-bold { font-weight: 700; }
+.t-extrabold { font-weight: 800; }
+.t-italic { font-style: italic; }
+
+.t-muted { color: var(--color-muted); }
+.t-primary { color: var(--color-primary); }
+.t-white { color: var(--color-white); }
+.t-dark-blue { color: var(--color-primary-dark); }
+.t-center { text-align: center; }
+.t-right { text-align: right; }
+
+.t-emoji {
+  font-family: var(--font-emoji);
+}
+
+/* --------------------------------------------------------------------------
+   Botones
+   -------------------------------------------------------------------------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.btn-primary {
+  width: 100%;
+  height: 52px;
+  gap: 10px;
+  color: var(--color-white);
+  background: var(--color-primary);
+  border-radius: var(--radius-12);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+.btn-primary:hover {
+  filter: brightness(0.96);
+}
+
+.btn-primary:active {
+  transform: translateY(1px);
+}
+
+.btn-add {
+  width: 100%;
+  height: 32px;
+  gap: 5px;
+  color: var(--color-white);
+  background: var(--color-primary);
+  border-radius: var(--radius-8);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 13px;
+}
+
+.btn-add:hover {
+  filter: brightness(0.96);
+}
+
+.btn-add:active {
+  transform: translateY(1px);
+}
+
+.btn-social {
+  flex: 1 1 0;
+  height: 50px;
+  gap: 9px;
+  color: var(--color-ink);
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-12);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 17px;
+}
+
+.btn-social:hover {
+  background: var(--color-surface);
+}
+
+.btn-apply {
+  height: 36px;
+  padding: 0 14px;
+  color: var(--color-primary);
+  background: var(--color-surface-accent);
+  border-radius: var(--radius-8);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 15px;
+  flex: 0 0 auto;
+}
+
+.btn-apply:hover {
+  filter: brightness(0.97);
+}
+
+.link {
+  color: var(--color-primary);
+  font-weight: 600;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.link--muted {
+  color: inherit;
+}
+
+.icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+}
+
+/* --------------------------------------------------------------------------
+   Formularios
+   -------------------------------------------------------------------------- */
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-field);
+  min-width: 0;
+}
+
+.field__label {
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 16px;
+  color: var(--color-ink);
+}
+
+.field__hint {
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12px;
+  color: var(--color-muted);
+}
+
+.input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  height: 50px;
+  padding: 0 14px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-12);
+}
+
+.input:focus-within {
+  border-color: var(--color-primary);
+}
+
+.input input {
+  flex: 1 1 auto;
+  min-width: 0;
+  height: 100%;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  color: var(--color-ink);
+}
+
+.input input::placeholder {
+  color: var(--color-muted);
+  opacity: 1;
+}
+
+.input__icon {
+  color: var(--color-muted);
+}
+
+.input__action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  color: var(--color-muted);
+}
+
+/* Checkbox del diseño */
+.checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.checkbox input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.checkbox__box {
+  display: flex;
+  flex: 0 0 20px;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  color: var(--color-white);
+  background: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-5);
+  transition: background 140ms var(--ease), border-color 140ms var(--ease);
+}
+
+.checkbox input:not(:checked) + .checkbox__box {
+  color: transparent;
+  background: transparent;
+  border-color: var(--color-border);
+}
+
+.checkbox input:focus-visible + .checkbox__box {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.checkbox__text {
+  flex: 1;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 17.6px;
+  color: var(--color-muted);
+}
+
+/* --------------------------------------------------------------------------
+   Divisores y elementos auxiliares
+   -------------------------------------------------------------------------- */
+
+.divider {
+  height: 1px;
+  background: var(--color-border);
+}
+
+.divider-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  height: 13px;
+}
+
+.divider-row__rule {
+  flex: 1 1 0;
+  height: 1px;
+  background: var(--color-border);
+}
+
+.divider-row__label {
+  flex: 0 0 auto;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 13px;
+  color: var(--color-muted);
+}
+
+.assurance {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  height: 12px;
+  color: var(--color-muted);
+}
+
+.assurance__text {
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12px;
+  white-space: nowrap;
+}
+
+/* --------------------------------------------------------------------------
+   Cabecera de páginas internas
+   -------------------------------------------------------------------------- */
+
+.page-header {
+  display: grid;
+  grid-template-columns: 34px 1fr 34px;
+  align-items: center;
+  height: 52px;
+}
+
+.page-header__back {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 34px;
+  height: 36px;
+  color: var(--color-ink);
+}
+
+.page-header h1 {
+  text-align: center;
+}
+
+.page-header__action {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 34px;
+  height: 36px;
+  color: var(--color-ink);
+}
+
+/* --------------------------------------------------------------------------
+   Líneas de resumen (carrito y pago)
+   -------------------------------------------------------------------------- */
+
+.summary-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  height: 17px;
+}
+
+.summary-line__label {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+  color: var(--color-muted);
+}
+
+.summary-line__amount {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 17px;
+  color: var(--color-ink);
+}
+
+.summary-line--total {
+  height: 27px;
+}
+
+.summary-line__label--total {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 21px;
+  color: var(--color-ink);
+}
+
+.summary-line__amount--total {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 27px;
+  color: var(--color-primary);
+}
+
+/* --------------------------------------------------------------------------
+   Chips de categoría
+   -------------------------------------------------------------------------- */
+
+.chip {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  height: 31px;
+  padding: 0 11px;
+  color: var(--color-muted);
+  background: var(--color-surface);
+  border-radius: var(--radius-pill);
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 12px;
+  white-space: nowrap;
+}
+
+.chip.is-active {
+  color: var(--color-white);
+  background: var(--color-primary);
+}
+
+/* --------------------------------------------------------------------------
+   Badge del carrito
+   -------------------------------------------------------------------------- */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 15px;
+  height: 15px;
+  padding: 0 4px;
+  color: var(--color-white);
+  background: var(--color-primary);
+  border-radius: var(--radius-pill);
+  font-size: 9px;
+  font-weight: 700;
+  line-height: 11px;
+}

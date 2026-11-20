@@ -1,0 +1,337 @@
+/* ==========================================================================
+   TECNOLOG — Pago
+   Composición extraída del frame "Payment Checkout" (393x852)
+   ========================================================================== */
+
+.checkout-content {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 0;
+  padding: 0 var(--pad-cart) 10px;
+}
+
+/* Progreso ---------------------------------------------------------------- */
+
+.progress {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 22px;
+}
+
+.progress__step {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.progress__marker {
+  display: flex;
+  flex: 0 0 22px;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 12px;
+  color: var(--color-muted);
+  background: var(--color-surface);
+  border-radius: var(--radius-pill);
+}
+
+.progress__step.is-done .progress__marker {
+  color: var(--color-primary);
+  background: var(--color-surface-accent);
+}
+
+.progress__step.is-current .progress__marker {
+  color: var(--color-white);
+  background: var(--color-primary);
+}
+
+.progress__label {
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 13px;
+  color: var(--color-muted);
+  white-space: nowrap;
+}
+
+.progress__step.is-done .progress__label,
+.progress__step.is-current .progress__label {
+  color: var(--color-primary);
+}
+
+.progress__step.is-current .progress__label {
+  font-weight: 700;
+}
+
+.progress__connector {
+  width: 17px;
+  height: 1px;
+  background: var(--color-border);
+}
+
+/* Dirección --------------------------------------------------------------- */
+
+.address-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  min-height: 82px;
+  padding: 14px;
+  background: var(--color-surface);
+  border-radius: var(--radius-12);
+}
+
+.address-card__icon {
+  flex: 0 0 18px;
+  margin-top: 1px;
+}
+
+.address-card__body {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+
+.address-card__recipient {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 15px;
+  color: var(--color-ink);
+}
+
+.address-card__street {
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 16.5px;
+  color: var(--color-muted);
+}
+
+.address-card__change {
+  flex: 0 0 auto;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 12px;
+  color: var(--color-primary);
+}
+
+.address-card__change:hover {
+  text-decoration: underline;
+}
+
+/* Método de pago ---------------------------------------------------------- */
+
+.payment-method {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.payment-method__title {
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 23px;
+  letter-spacing: -0.4px;
+  color: var(--color-ink);
+}
+
+.payment-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.method-card {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  height: 48px;
+  padding: 0 13px;
+  text-align: left;
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-12);
+}
+
+.method-card.is-selected {
+  background: var(--color-surface-accent);
+  border: 1.4px solid var(--color-primary);
+}
+
+.method-radio {
+  position: relative;
+  flex: 0 0 17px;
+  width: 17px;
+  height: 17px;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-pill);
+}
+
+.method-card.is-selected .method-radio {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.method-card.is-selected .method-radio::after {
+  content: "";
+  position: absolute;
+  inset: 5px;
+  background: var(--color-white);
+  border-radius: var(--radius-pill);
+}
+
+.method-card__label {
+  flex: 1 1 auto;
+  min-width: 0;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+  color: var(--color-ink);
+}
+
+.method-card__networks {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 7px;
+}
+
+.network-visa {
+  font-size: 10px;
+  font-weight: 800;
+  font-style: italic;
+  line-height: 12px;
+  color: var(--color-primary);
+}
+
+.network-mastercard {
+  display: flex;
+}
+
+.network-mastercard i {
+  display: block;
+  width: 14px;
+  height: 14px;
+  background: var(--color-primary);
+  border-radius: var(--radius-pill);
+}
+
+.network-mastercard i:last-child {
+  margin-left: -5px;
+  background: var(--color-mastercard);
+}
+
+.method-alternatives {
+  display: flex;
+  gap: 10px;
+}
+
+.method-option {
+  display: flex;
+  flex: 1 1 0;
+  align-items: center;
+  gap: 9px;
+  height: 43px;
+  min-width: 0;
+  padding: 0 12px;
+  text-align: left;
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-12);
+}
+
+.method-option .method-radio {
+  flex-basis: 16px;
+  width: 16px;
+  height: 16px;
+}
+
+.method-option.is-selected {
+  background: var(--color-surface-accent);
+  border-color: var(--color-primary);
+}
+
+.method-option.is-selected .method-radio {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.method-option.is-selected .method-radio::after {
+  content: "";
+  position: absolute;
+  inset: 4.5px;
+  background: var(--color-white);
+  border-radius: var(--radius-pill);
+}
+
+.method-option__label {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 15px;
+  color: var(--color-ink);
+  white-space: nowrap;
+}
+
+.method-option__label--paypal {
+  color: var(--color-primary);
+  font-style: italic;
+}
+
+/* Datos de la tarjeta ----------------------------------------------------- */
+
+.card-details {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.card-details__row {
+  display: flex;
+  gap: 12px;
+}
+
+.card-details__row .field {
+  flex: 1 1 0;
+}
+
+.card-details.is-disabled {
+  opacity: 0.55;
+}
+
+.card-details.is-disabled input {
+  pointer-events: none;
+}
+
+/* Confirmación ------------------------------------------------------------ */
+
+.payment-confirmation {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.payment-confirmation__detail {
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12px;
+  color: var(--color-muted);
+}
+
+/* Pantallas de poca altura ------------------------------------------------- */
+
+@media (max-height: 820px) {
+  .checkout-content {
+    gap: 20px;
+  }
+
+  .checkout-content > * {
+    flex-shrink: 0;
+  }
+}

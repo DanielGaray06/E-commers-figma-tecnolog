@@ -1,0 +1,122 @@
+/* ==========================================================================
+   TECNOLOG — Crear cuenta
+   Composición extraída del frame "Register" (393x852)
+   ========================================================================== */
+
+.register-content {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 0;
+  padding: 6px var(--pad-login) 12px;
+}
+
+.brand-nav {
+  display: grid;
+  grid-template-columns: 24px 1fr 24px;
+  align-items: center;
+  height: 44px;
+}
+
+.brand-nav__back {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 24px;
+  height: 24px;
+  color: var(--color-ink);
+}
+
+.brand-nav p {
+  text-align: center;
+}
+
+.brand-nav__balance {
+  width: 24px;
+  height: 24px;
+}
+
+.account-intro {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.account-intro__text {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 19.5px;
+  color: var(--color-muted);
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 28px;
+  flex: 0 0 auto;
+}
+
+.account-details {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.password-setup {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.terms {
+  width: 100%;
+}
+
+.terms .link {
+  font-size: inherit;
+  font-weight: 500;
+}
+
+.register-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.switch-text {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+  color: var(--color-muted);
+  text-align: center;
+}
+
+.switch-text .link {
+  font-size: 12px;
+}
+
+/* Estados de validación --------------------------------------------------- */
+
+.input.is-invalid {
+  border-color: #c0392b;
+  background: #fdf3f2;
+}
+
+.checkbox.is-invalid .checkbox__box {
+  border-color: #c0392b;
+}
+
+/* Pantallas de poca altura ------------------------------------------------- */
+
+@media (max-height: 820px) {
+  .register-content {
+    justify-content: flex-start;
+    gap: 24px;
+  }
+
+  .register-form {
+    gap: 24px;
+  }
+}

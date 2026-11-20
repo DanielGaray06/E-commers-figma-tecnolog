@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Preview 393×852</title>
+  <style>
+    html, body { margin: 0; padding: 0; background: #dfe6ef; }
+    iframe { display: block; width: 393px; height: 852px; border: 0; background: #fff; }
+  </style>
+</head>
+<body>
+  <iframe id="preview-frame" title="Vista previa"></iframe>
+  <script>
+    var params = new URLSearchParams(location.search);
+    var page = params.get("p") || "index";
+    if (params.get("seed") === "1") {
+      localStorage.setItem("tecnolog_session", JSON.stringify({ name: "Alex Morgan", email: "alex@example.com" }));
+    }
+    document.getElementById("preview-frame").src =
+      page === "index" ? "index.html" : "pages/" + page + ".html";
+  </script>
+</body>
+</html>

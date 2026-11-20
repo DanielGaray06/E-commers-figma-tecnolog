@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Completa el pago de tu pedido TECNOLOG de forma segura.">
+  <title>Pago — TECNOLOG</title>
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/pages/checkout.css">
+</head>
+<body class="page page--checkout" data-base="../">
+  <div class="app">
+    <header class="status-bar" aria-hidden="true">
+      <span class="status-bar__time">9:41</span>
+      <div class="status-bar__icons">
+        <svg class="status-icon status-icon--signal" focusable="false"><use href="#i-ios-signal"></use></svg>
+        <svg class="status-icon status-icon--wifi" focusable="false"><use href="#i-ios-wifi"></use></svg>
+        <svg class="status-icon status-icon--battery" focusable="false"><use href="#i-ios-battery"></use></svg>
+      </div>
+    </header>
+
+    <main class="checkout-content content--scroll" id="main">
+      <header class="page-header">
+        <a class="page-header__back" href="carrito.html" aria-label="Volver al carrito">
+          <svg class="icon icon-23" aria-hidden="true"><use href="#i-chevron-left"></use></svg>
+        </a>
+        <h1 class="t-title">Pago</h1>
+        <span class="page-header__action" aria-hidden="true">
+          <svg class="icon icon-21" aria-hidden="true"><use href="#i-lock-keyhole"></use></svg>
+        </span>
+      </header>
+
+      <div class="progress" aria-label="Progreso del pago">
+        <div class="progress__step is-done">
+          <span class="progress__marker">
+            <svg class="icon icon-12" aria-hidden="true"><use href="#i-check"></use></svg>
+          </span>
+          <span class="progress__label">Envío</span>
+        </div>
+        <div class="progress__step is-current">
+          <span class="progress__connector" aria-hidden="true"></span>
+          <span class="progress__marker">2</span>
+          <span class="progress__label">Pago</span>
+        </div>
+        <div class="progress__step">
+          <span class="progress__connector" aria-hidden="true"></span>
+          <span class="progress__marker">3</span>
+          <span class="progress__label">Revisión</span>
+        </div>
+      </div>
+
+      <section class="address-card" aria-label="Dirección de envío">
+        <svg class="icon icon-18 t-primary address-card__icon" aria-hidden="true"><use href="#i-map-pin"></use></svg>
+        <div class="address-card__body">
+          <p class="address-card__recipient">Enviar a <span data-shipping-name>Alex Morgan</span></p>
+          <p class="address-card__street">128 Spring St, Apt 4B<br>Nueva York, NY 10013, Estados Unidos</p>
+        </div>
+        <button class="address-card__change" type="button" data-demo="La edición de la dirección no está incluida en el diseño.">Cambiar</button>
+      </section>
+
+      <section class="payment-method" aria-labelledby="payment-method-title">
+        <h2 class="payment-method__title" id="payment-method-title">Método de pago</h2>
+
+        <div class="payment-options" role="radiogroup" aria-label="Método de pago">
+          <button class="method-card is-selected" type="button" role="radio" aria-checked="true" data-method="card">
+            <span class="method-radio" aria-hidden="true"></span>
+            <svg class="icon icon-19 t-primary" aria-hidden="true"><use href="#i-credit-card"></use></svg>
+            <span class="method-card__label">Tarjeta de crédito / débito</span>
+            <span class="method-card__networks" aria-hidden="true">
+              <span class="network-visa">VISA</span>
+              <span class="network-mastercard"><i></i><i></i></span>
+            </span>
+          </button>
+
+          <div class="method-alternatives">
+            <button class="method-option" type="button" role="radio" aria-checked="false" data-method="apple">
+              <span class="method-radio" aria-hidden="true"></span>
+              <svg class="icon icon-17 icon--filled" aria-hidden="true"><use href="#i-apple"></use></svg>
+              <span class="method-option__label">Apple Pay</span>
+            </button>
+            <button class="method-option" type="button" role="radio" aria-checked="false" data-method="paypal">
+              <span class="method-radio" aria-hidden="true"></span>
+              <span class="method-option__label method-option__label--paypal">PayPal</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="card-details" id="card-details" aria-label="Datos de la tarjeta">
+        <div class="field">
+          <label class="field__label" for="card-number">Número de tarjeta</label>
+          <div class="input">
+            <input id="card-number" name="card-number" type="text" inputmode="numeric" autocomplete="cc-number" placeholder="4242 4242 4242 4242" maxlength="19">
+            <svg class="icon icon-18 input__icon" aria-hidden="true"><use href="#i-credit-card"></use></svg>
+          </div>
+        </div>
+
+        <div class="card-details__row">
+          <div class="field">
+            <label class="field__label" for="card-expiry">Vencimiento</label>
+            <div class="input">
+              <input id="card-expiry" name="card-expiry" type="text" inputmode="numeric" autocomplete="cc-exp" placeholder="MM / AA" maxlength="7">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="field__label" for="card-cvv">CVV</label>
+            <div class="input">
+              <input id="card-cvv" name="card-cvv" type="text" inputmode="numeric" autocomplete="cc-csc" placeholder="•••" maxlength="4">
+              <button class="input__action" type="button" data-demo="El CVV es el código de 3 o 4 dígitos del reverso de tu tarjeta." aria-label="Qué es el CVV">
+                <svg class="icon icon-18" aria-hidden="true"><use href="#i-circle-help"></use></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="payment-confirmation" aria-labelledby="total-title">
+        <span class="divider"></span>
+
+        <div class="summary-line summary-line--total">
+          <span class="summary-line__label summary-line__label--total" id="total-title">Total</span>
+          <span class="summary-line__amount summary-line__amount--total" data-total>$88.15</span>
+        </div>
+
+        <p class="payment-confirmation__detail" data-order-detail>3 artículos · Incluye $4.99 de envío y $6.16 de impuestos</p>
+
+        <button class="btn btn-primary" type="button" id="pay-button">
+          <span data-pay-label>Pagar ahora · $88.15</span>
+          <svg class="icon icon-18" aria-hidden="true"><use href="#i-lock-keyhole"></use></svg>
+        </button>
+
+        <div class="assurance">
+          <svg class="icon icon-12" aria-hidden="true"><use href="#i-lock-keyhole"></use></svg>
+          <span class="assurance__text">Cifrado de 256 bits · Tu pago está protegido</span>
+        </div>
+      </section>
+    </main>
+
+    <div class="home-indicator" aria-hidden="true"><span></span></div>
+  </div>
+
+  <script src="../js/modules/icons.js" defer></script>
+  <script src="../js/modules/storage.js" defer></script>
+  <script src="../js/modules/ui.js" defer></script>
+  <script src="../js/navigation.js" defer></script>
+  <script src="../js/main.js" defer></script>
+  <script src="../js/modules/checkout.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Crea tu cuenta TECNOLOG y accede a ventajas exclusivas.">
+  <title>Crear cuenta — TECNOLOG</title>
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/pages/registro.css">
+</head>
+<body class="page page--register" data-base="../">
+  <div class="app">
+    <header class="status-bar" aria-hidden="true">
+      <span class="status-bar__time">9:41</span>
+      <div class="status-bar__icons">
+        <svg class="status-icon status-icon--signal" focusable="false"><use href="#i-ios-signal"></use></svg>
+        <svg class="status-icon status-icon--wifi" focusable="false"><use href="#i-ios-wifi"></use></svg>
+        <svg class="status-icon status-icon--battery" focusable="false"><use href="#i-ios-battery"></use></svg>
+      </div>
+    </header>
+
+    <main class="register-content content--scroll" id="main">
+      <nav class="brand-nav" aria-label="Navegación de registro">
+        <a class="brand-nav__back" href="login.html" aria-label="Volver a iniciar sesión">
+          <svg class="icon icon-24" aria-hidden="true"><use href="#i-chevron-left"></use></svg>
+        </a>
+        <p class="t-wordmark-sm">TECNOLOG</p>
+        <span class="brand-nav__balance" aria-hidden="true"></span>
+      </nav>
+
+      <header class="account-intro">
+        <p class="t-eyebrow">BIENVENIDO A TECNOLOG</p>
+        <h1 class="t-h2">Crea tu cuenta</h1>
+        <p class="account-intro__text">Mejor tecnología. Ventajas exclusivas. Todo tuyo.</p>
+      </header>
+
+      <form class="register-form" id="register-form" novalidate>
+        <div class="account-details">
+          <div class="field">
+            <label class="field__label" for="register-name">Nombre completo</label>
+            <div class="input">
+              <input id="register-name" name="name" type="text" autocomplete="name" placeholder="Tu nombre y apellido" required>
+              <svg class="icon icon-18 input__icon" aria-hidden="true"><use href="#i-user-round"></use></svg>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="field__label" for="register-email">Correo electrónico</label>
+            <div class="input">
+              <input id="register-email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="tu@ejemplo.com" required>
+              <svg class="icon icon-18 input__icon" aria-hidden="true"><use href="#i-mail"></use></svg>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="field__label" for="register-phone">Teléfono</label>
+            <div class="input">
+              <input id="register-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+1 (555) 000-0000">
+              <svg class="icon icon-18 input__icon" aria-hidden="true"><use href="#i-phone"></use></svg>
+            </div>
+          </div>
+
+          <div class="password-setup">
+            <div class="field">
+              <label class="field__label" for="register-password">Contraseña</label>
+              <div class="input">
+                <input id="register-password" name="password" type="password" autocomplete="new-password" placeholder="Crea una contraseña" required>
+                <button class="input__action" type="button" data-password-toggle="register-password" aria-label="Mostrar contraseña">
+                  <svg class="icon icon-18" aria-hidden="true"><use href="#i-eye-off"></use></svg>
+                </button>
+              </div>
+            </div>
+            <p class="field__hint">Usa al menos 8 caracteres, incluido un número.</p>
+          </div>
+        </div>
+
+        <label class="checkbox terms">
+          <input id="register-terms" name="terms" type="checkbox" checked required>
+          <span class="checkbox__box" aria-hidden="true">
+            <svg class="icon icon-14" aria-hidden="true"><use href="#i-check"></use></svg>
+          </span>
+          <span class="checkbox__text">Acepto los <a class="link" href="#" data-demo="Los Términos del servicio no están incluidos en el diseño.">Términos del servicio</a> y la <a class="link" href="#" data-demo="La Política de privacidad no está incluida en el diseño.">Política de privacidad</a>.</span>
+        </label>
+
+        <div class="register-actions">
+          <button class="btn btn-primary" type="submit">
+            <span>Crear cuenta</span>
+            <svg class="icon icon-18" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+          </button>
+
+          <p class="switch-text">¿Ya tienes una cuenta? <a class="link" href="login.html">Iniciar sesión</a></p>
+
+          <div class="assurance">
+            <svg class="icon icon-12" aria-hidden="true"><use href="#i-lock-keyhole"></use></svg>
+            <span class="assurance__text">Tus datos personales se mantienen privados y protegidos.</span>
+          </div>
+        </div>
+      </form>
+    </main>
+
+    <div class="home-indicator" aria-hidden="true"><span></span></div>
+  </div>
+
+  <script src="../js/modules/icons.js" defer></script>
+  <script src="../js/modules/storage.js" defer></script>
+  <script src="../js/modules/ui.js" defer></script>
+  <script src="../js/navigation.js" defer></script>
+  <script src="../js/main.js" defer></script>
+  <script src="../js/modules/auth.js" defer></script>
+</body>
+</html>

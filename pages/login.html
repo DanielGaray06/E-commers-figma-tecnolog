@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Inicia sesión en TECNOLOG y continúa con tus esenciales tecnológicos.">
+  <title>Iniciar sesión — TECNOLOG</title>
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/pages/login.css">
+</head>
+<body class="page page--login" data-base="../">
+  <div class="app">
+    <header class="status-bar" aria-hidden="true">
+      <span class="status-bar__time">9:41</span>
+      <div class="status-bar__icons">
+        <svg class="status-icon status-icon--signal" focusable="false"><use href="#i-ios-signal"></use></svg>
+        <svg class="status-icon status-icon--wifi" focusable="false"><use href="#i-ios-wifi"></use></svg>
+        <svg class="status-icon status-icon--battery" focusable="false"><use href="#i-ios-battery"></use></svg>
+      </div>
+    </header>
+
+    <main class="login-content content--scroll" id="main">
+      <header class="brand-intro">
+        <p class="t-wordmark">TECNOLOG</p>
+        <p class="t-tagline">TECNOLOGÍA COTIDIANA. ELEVADA.</p>
+      </header>
+
+      <form class="login-form" id="login-form" novalidate>
+        <div class="welcome">
+          <h1 class="t-h1">Hola de nuevo</h1>
+          <p class="welcome__text">Inicia sesión para tus esenciales diarios.</p>
+        </div>
+
+        <div class="credentials">
+          <div class="field">
+            <label class="field__label" for="login-email">Correo electrónico</label>
+            <div class="input">
+              <input id="login-email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="tu@ejemplo.com" required>
+              <svg class="icon icon-18 input__icon" aria-hidden="true"><use href="#i-mail"></use></svg>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="field__label" for="login-password">Contraseña</label>
+            <div class="input">
+              <input id="login-password" name="password" type="password" autocomplete="current-password" placeholder="Ingresa tu contraseña" required>
+              <button class="input__action" type="button" data-password-toggle="login-password" aria-label="Mostrar contraseña">
+                <svg class="icon icon-18" aria-hidden="true"><use href="#i-eye-off"></use></svg>
+              </button>
+            </div>
+          </div>
+
+          <a class="forgot" href="#" data-demo="La recuperación de contraseña no está incluida en el diseño.">¿Olvidaste tu contraseña?</a>
+        </div>
+
+        <button class="btn btn-primary" type="submit">
+          <span>Iniciar sesión</span>
+          <svg class="icon icon-18" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+        </button>
+
+        <p class="switch-text">¿Nuevo en TECNOLOG? <a class="link" href="registro.html">Crear cuenta</a></p>
+      </form>
+
+      <section class="alt-signin" aria-label="Otros métodos de acceso">
+        <div class="divider-row">
+          <span class="divider-row__rule"></span>
+          <span class="divider-row__label">o continúa con</span>
+          <span class="divider-row__rule"></span>
+        </div>
+
+        <div class="social-row">
+          <button class="btn btn-social" type="button" data-demo="El acceso con Apple no está disponible en esta demo.">
+            <svg class="icon icon-20 icon--filled" aria-hidden="true"><use href="#i-apple"></use></svg>
+            <span>Apple</span>
+          </button>
+          <button class="btn btn-social" type="button" data-demo="El acceso con Google no está disponible en esta demo.">
+            <span class="google-mark" aria-hidden="true">G</span>
+            <span>Google</span>
+          </button>
+        </div>
+
+        <div class="assurance">
+          <svg class="icon icon-12" aria-hidden="true"><use href="#i-lock-keyhole"></use></svg>
+          <span class="assurance__text">Tus esenciales. Tu cuenta. Siempre segura.</span>
+        </div>
+      </section>
+    </main>
+
+    <div class="home-indicator" aria-hidden="true"><span></span></div>
+  </div>
+
+  <script src="../js/modules/icons.js" defer></script>
+  <script src="../js/modules/storage.js" defer></script>
+  <script src="../js/modules/ui.js" defer></script>
+  <script src="../js/navigation.js" defer></script>
+  <script src="../js/main.js" defer></script>
+  <script src="../js/modules/auth.js" defer></script>
+</body>
+</html>

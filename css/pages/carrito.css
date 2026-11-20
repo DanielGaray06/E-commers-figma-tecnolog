@@ -1,0 +1,292 @@
+/* ==========================================================================
+   TECNOLOG — Mi carrito
+   Composición extraída del frame "My Cart" (393x852)
+   ========================================================================== */
+
+.cart-content {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 0;
+  padding: 0 var(--pad-cart) 8px;
+}
+
+/* Lista de productos ------------------------------------------------------ */
+
+.cart-products {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.cart-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  height: 25px;
+}
+
+.cart-meta .link {
+  flex: 0 0 auto;
+}
+
+.cart-items {
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 0;
+}
+
+.cart-item + .cart-item {
+  border-top: 1px solid var(--color-border);
+}
+
+.cart-item__image {
+  flex: 0 0 90px;
+  width: 90px;
+  height: 106px;
+  object-fit: cover;
+  background: var(--color-surface);
+  border-radius: var(--radius-12);
+}
+
+.cart-item__details {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 7px;
+  min-width: 0;
+}
+
+.cart-item__head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.cart-item__name {
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 16px;
+  color: var(--color-ink);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cart-item__remove {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  color: var(--color-muted);
+}
+
+.cart-item__remove:hover {
+  color: #c0392b;
+}
+
+.cart-item__variant {
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 13px;
+  color: var(--color-muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cart-item__unit {
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12px;
+  color: var(--color-muted);
+}
+
+.cart-item__foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  height: 30px;
+}
+
+.cart-item__total {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 21px;
+  color: var(--color-ink);
+  white-space: nowrap;
+}
+
+/* Selector de cantidad ---------------------------------------------------- */
+
+.qty {
+  display: inline-flex;
+  align-items: center;
+  gap: 13px;
+  height: 30px;
+  padding: 0 8px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-8);
+}
+
+.qty__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 12px;
+  height: 12px;
+  color: var(--color-muted);
+}
+
+.qty__button[data-qty="plus"] {
+  color: var(--color-primary);
+}
+
+.qty__button:hover {
+  color: var(--color-primary-dark);
+}
+
+.qty__button:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.qty__value {
+  min-width: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 15px;
+  color: var(--color-ink);
+  text-align: center;
+}
+
+/* Carrito vacío ----------------------------------------------------------- */
+
+.cart-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 48px 12px 40px;
+  text-align: center;
+}
+
+.cart-empty__icon {
+  color: var(--color-muted);
+}
+
+.cart-empty__title {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  color: var(--color-ink);
+}
+
+.cart-empty__text {
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--color-muted);
+}
+
+.cart-empty__action {
+  width: auto;
+  height: 44px;
+  padding: 0 22px;
+  margin-top: 6px;
+}
+
+/* Código promocional ------------------------------------------------------ */
+
+.promo-form {
+  display: flex;
+  flex: 0 0 50px;
+  align-items: center;
+  gap: 10px;
+  height: 50px;
+  padding: 0 7px 0 14px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-12);
+}
+
+.promo-form input {
+  flex: 1 1 auto;
+  min-width: 0;
+  height: 100%;
+  padding: 0;
+  color: var(--color-ink);
+  background: transparent;
+  border: 0;
+  outline: 0;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+}
+
+.promo-form input::placeholder {
+  color: var(--color-muted);
+  opacity: 1;
+}
+
+/* Resumen ----------------------------------------------------------------- */
+
+.order-summary {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.order-summary__title {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19px;
+  color: var(--color-ink);
+}
+
+/* Acciones ---------------------------------------------------------------- */
+
+.cart-actions {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.delivery-estimate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  height: 14px;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 13px;
+  color: var(--color-muted);
+  text-align: center;
+}
+
+/* Pantallas de poca altura ------------------------------------------------- */
+
+@media (max-height: 820px) {
+  .cart-content {
+    gap: 20px;
+  }
+
+  .cart-content > * {
+    flex-shrink: 0;
+  }
+}
