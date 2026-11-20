@@ -1,171 +1,234 @@
-# TECNOLOG — Front-end estático
+# TECNOLOG — E-commerce Mobile
 
-Maqueta funcional de las **5 pantallas** del archivo de Figma `ECOMMERS MOBILE.fig`,
-construida solo con **HTML5, CSS3 y JavaScript nativo**. No usa frameworks, librerías
-de UI, backend ni autenticación real.
+**Frontend web estático desarrollado con HTML5, CSS3 y JavaScript Vanilla**, basado en el diseño original de Figma `ECOMMERS MOBILE.fig`.
 
-El objetivo es reproducir la fidelidad visual del diseño (medidas, tipografía, colores,
-imágenes e iconos) y añadir interacciones demo coherentes con las pantallas existentes.
+El proyecto reproduce cinco pantallas de una aplicación de comercio electrónico móvil, manteniendo la identidad visual del diseño original e incorporando interacciones funcionales para simular la experiencia de compra.
 
----
-
-## Acceso demo (login)
-
-**No hay una cuenta fija ni una contraseña predefinida.** El login es una simulación:
-
-| Campo | Valor |
-| --- | --- |
-| Correo | Cualquier correo con formato válido, por ejemplo `alex@tecnolog.com` |
-| Contraseña | Cualquier texto de **6 caracteres o más**, por ejemplo `tecnolog123` |
-
-Comportamiento:
-
-- Si el correo **no** está registrado, el nombre del saludo se deduce de la parte local
-  del correo (`alex@tecnolog.com` → `Alex`).
-- Si el correo **sí** está registrado (creado desde “Crear cuenta”), se usa el nombre
-  completo guardado. El saludo muestra solo el primer nombre.
-- La contraseña **no se compara** con la registrada: es una demo visual.
-- Para probar un nombre propio: entra en **Crear cuenta**, registra por ejemplo
-  `Daniel Garay` y vuelve al catálogo. Verás `Hola, Daniel 👋`.
-- La sesión se guarda en `localStorage`. No hay botón de cerrar sesión porque el diseño
-  no lo incluye; puedes borrarla desde la consola del navegador:
-
-```js
-localStorage.removeItem("tecnolog_session");
-```
+> **Estado:** Frontend funcional | **Backend:** No implementado | **Tipo:** Proyecto educativo
 
 ---
 
-## Pantallas y flujos
+## 1. Características principales
+
+- Reproducción visual del diseño original de Figma.
+- Interfaz responsive inspirada en dispositivos iPhone.
+- Catálogo de productos con búsqueda y filtros.
+- Sistema de registro e inicio de sesión simulado.
+- Gestión dinámica del carrito de compras.
+- Proceso de checkout con métodos de pago.
+- Persistencia de información mediante `localStorage`.
+- Validaciones de formularios y notificaciones dinámicas.
+
+## 2. Tecnologías utilizadas
+
+| Tecnología | Aplicación |
+|---|---|
+| HTML5 | Estructura de las interfaces |
+| CSS3 | Estilos, componentes y diseño responsive |
+| JavaScript ES6+ | Lógica e interactividad |
+| SVG | Iconografía |
+| LocalStorage | Persistencia de datos en el navegador |
+| Inter | Tipografía principal |
+
+**Arquitectura:** Frontend estático, sin frameworks, librerías de UI ni dependencias externas.
+
+---
+
+## 3. Pantallas implementadas
 
 | # | Pantalla | Archivo |
-| --- | --- | --- |
-| 1 | Catálogo (entrada) | `index.html` |
-| 2 | Iniciar sesión | `pages/login.html` |
-| 3 | Crear cuenta | `pages/registro.html` |
-| 4 | Mi carrito | `pages/carrito.html` |
-| 5 | Pago | `pages/checkout.html` |
+|---|---|---|
+| 01 | Catálogo de productos | `index.html` |
+| 02 | Inicio de sesión | `pages/login.html` |
+| 03 | Registro de usuarios | `pages/registro.html` |
+| 04 | Carrito de compras | `pages/carrito.html` |
+| 05 | Checkout | `pages/checkout.html` |
 
-Flujos implementados:
+### Flujo de navegación
 
-1. **El catálogo es la entrada.** Se abre `index.html` sin pedir login.
-2. **Login antes de pagar:** en el carrito, “Proceder al pago” redirige a
-   `pages/login.html?redirect=checkout`; tras iniciar sesión se vuelve al pago.
-3. **Registro:** crea el usuario en `localStorage`, inicia sesión y vuelve al catálogo
-   (o al destino indicado por `?redirect=`).
-4. **Saludo dinámico:** `Hola, <nombre> 👋` usa el nombre de la sesión; por defecto
-   muestra `Alex` cuando no hay sesión.
-5. **Checkout protegido:** si se abre `pages/checkout.html` sin sesión, redirige al login.
-6. **Carrito demo inicial:** funda (×1) + cargador (×2) = subtotal `$77.00`,
-   envío `$4.99`, impuestos `$6.16`, total `$88.15`, igual que el diseño.
+1. El usuario ingresa directamente al catálogo.
+2. Puede explorar productos, buscar, filtrar y agregarlos al carrito.
+3. Para proceder al pago debe iniciar sesión o crear una cuenta.
+4. Después de autenticarse, continúa automáticamente al checkout.
+5. Puede seleccionar un método de pago y completar la simulación de compra.
 
 ---
 
-## Estructura del proyecto
+## 4. Estructura del proyecto
 
 ```text
 front-end(Figma)/
-├── index.html                  # Catálogo (entrada)
+│
+├── index.html
+│
 ├── pages/
 │   ├── login.html
 │   ├── registro.html
 │   ├── carrito.html
 │   └── checkout.html
+│
 ├── css/
-│   ├── variables.css           # Tokens del diseño (color, tipografía, medidas)
-│   ├── global.css              # Reset, shell de la app, status bar, toast
-│   ├── components.css          # Botones, campos, chips, checkbox, tipografía
+│   ├── variables.css
+│   ├── global.css
+│   ├── components.css
 │   └── pages/
 │       ├── productos.css
 │       ├── login.css
 │       ├── registro.css
 │       ├── carrito.css
 │       └── checkout.css
+│
 ├── js/
-│   ├── main.js                 # Inicialización común (nombre, badge)
-│   ├── navigation.js           # Rutas, gating de auth, enlaces demo
+│   ├── main.js
+│   ├── navigation.js
 │   └── modules/
-│       ├── icons.js            # Sprite SVG (Lucide + iconos iOS + Apple)
-│       ├── storage.js          # Productos, carrito, sesión, usuarios, favoritos
-│       ├── ui.js               # Toast, moneda, helpers
-│       ├── auth.js             # Login y registro
-│       ├── catalog.js          # Búsqueda, filtros, favoritos, agregar
-│       ├── cart.js             # Cantidades, eliminar, totales
-│       └── checkout.js         # Métodos de pago, formateo y pago simulado
+│       ├── icons.js
+│       ├── storage.js
+│       ├── ui.js
+│       ├── auth.js
+│       ├── catalog.js
+│       ├── cart.js
+│       └── checkout.js
+│
 └── assets/
-    ├── fonts/                  # Inter variable (roman + italic) en WOFF2
-    └── images/                 # 5 imágenes originales extraídas del .fig
+    ├── fonts/
+    └── images/
 ```
+
+### Organización del código
+
+El proyecto utiliza una estructura modular para separar responsabilidades:
+
+- **CSS:** variables globales, estilos compartidos y hojas específicas por pantalla.
+- **JavaScript:** navegación, almacenamiento, autenticación simulada, catálogo, carrito y checkout.
+- **Assets:** recursos gráficos, imágenes y tipografías.
 
 ---
 
-## Cómo ejecutar
+## 5. Instalación y ejecución
 
-No requiere instalación ni build. Recomendado servir por HTTP:
+El proyecto no requiere instalación de dependencias ni procesos de compilación.
+
+**Requisitos:**
+- Python 3 instalado (opcional, para levantar un servidor local).
+- Navegador web moderno.
+
+**Ejecutar localmente:**
 
 ```bash
 cd "front-end(Figma)"
 python -m http.server 4173
 ```
 
-Abre <http://localhost:4173/>.
+Abrir en el navegador:
 
-También funciona abriendo `index.html` directamente (`file://`), porque los scripts son
-clásicos con `defer` y no usan módulos ES.
+```text
+http://localhost:4173/
+```
 
----
-
-## Decisiones de diseño
-
-- **Medidas base:** 393 × 852 px (iPhone 16), con radio de pantalla de 32 px.
-- **Responsive sin rediseño:** ancho fluido de **393 a 440 px** y alto de **852 a 956 px**
-  (iPhone 16/17/Pro Max). En escritorio la app se centra con un máximo de 440 px y
-  956 px de alto, sobre un fondo neutro.
-- **Sin desbordes horizontales:** las imágenes usan `object-fit` y proporciones fijas;
-  el contenido largo se recorta con elipsis.
-- **Tokens en CSS:** colores, radios, espaciados y tipografía salen de `variables.css`.
-  Paleta principal: `#14283E` (tinta), `#748192` (secundario), `#00529B` (primario),
-  `#004080` (primario oscuro), `#E3E9F0` (borde), `#F5F7FA` (superficie),
-  `#EDF4FB` (acento).
-- **Tipografía:** Inter variable, servida localmente desde `assets/fonts/`.
-- **Iconos:** set **Lucide** en un sprite SVG inline, igual que el diseño. Los iconos de
-  la status bar de iOS y el logo de Apple son trazos propios.
-- **Textos en español:** toda la interfaz está traducida, manteniendo marca, nombres de
-  producto y precios en USD.
-- **Sin pantallas inventadas:** solo las 5 pantallas del archivo. Las acciones que no
-  tienen pantalla (recuperar contraseña, Apple/Google, filtros avanzados, cambiar
-  dirección, códigos promocionales) muestran un toast informativo.
-- **Persistencia:** `localStorage` para carrito, sesión, usuarios y favoritos. No hay API.
+También es posible abrir directamente `index.html`, ya que los scripts utilizan `defer` y no dependen de módulos ES.
 
 ---
 
-## Interacciones incluidas
+## 6. Funcionalidades implementadas
 
-- Búsqueda por texto y filtros por categoría (chips).
-- Filtro de favoritos y toggle del corazón en cada producto.
-- Agregar al carrito con actualización del badge.
-- Cambiar cantidades (mínimo 1, máximo 99), eliminar productos y recalcular totales.
-- Estado de carrito vacío (aunque el diseño no lo muestre).
-- Selección de método de pago (tarjeta, Apple Pay, PayPal).
-- Formateo automático de número de tarjeta, vencimiento y CVV.
-- Validación y **pago simulado** con toast de confirmación y retorno al catálogo.
-- Toasts para acciones no contempladas en el diseño.
+### Catálogo
+- Búsqueda dinámica de productos.
+- Filtros por categoría.
+- Visualización de favoritos.
+- Agregar productos al carrito.
+
+### Autenticación simulada
+- Registro de usuarios.
+- Inicio de sesión.
+- Validación básica del correo y contraseña.
+- Personalización del saludo según el usuario.
+- Persistencia de sesión mediante `localStorage`.
+
+### Carrito de compras
+- Modificación de cantidades.
+- Eliminación de productos.
+- Actualización automática de subtotales y totales.
+- Control de cantidades entre 1 y 99.
+- Gestión del estado de carrito vacío.
+
+### Checkout
+- Selección de tarjeta, Apple Pay y PayPal.
+- Formateo automático de los datos de tarjeta.
+- Validación de campos.
+- Simulación de pago y confirmación visual.
 
 ---
 
-## Recursos
+## 7. Acceso a la demo
 
-- Las 5 imágenes de producto/promo se extrajeron del propio archivo `.fig` y se
-  conservan en `assets/images/`.
-- Inter se distribuye bajo SIL Open Font License.
-- El diseño original pertenece a su autor en Figma; este repositorio es una maqueta
-  educativa de front-end.
+La autenticación es exclusivamente visual y no utiliza un sistema de usuarios real.
+
+| Campo | Valor de prueba |
+|---|---|
+| Correo | `alex@tecnolog.com` |
+| Contraseña | `tecnolog123` |
+
+**Consideraciones:**
+
+- Se acepta cualquier correo con formato válido.
+- La contraseña debe tener mínimo seis caracteres.
+- Los usuarios registrados conservan su nombre completo en `localStorage`.
+- Si el correo no está registrado, el nombre del saludo se obtiene de la dirección de correo.
+- La contraseña no se compara contra una contraseña almacenada.
+
+Para probar un nombre personalizado, utiliza la opción **Crear cuenta** y registra un usuario.
+
+Para reiniciar la sesión desde la consola del navegador:
+
+```javascript
+localStorage.removeItem("tecnolog_session");
+```
 
 ---
 
-## Limitaciones
+## 8. Decisiones técnicas y diseño
 
-- No hay backend, base de datos, autenticación real ni pasarela de pago.
-- La contraseña no se almacena ni se valida; solo se guarda nombre, correo y teléfono.
-- No existen pantallas de detalle de producto, perfil, éxito de pago ni favoritos
-  dedicados, porque no están en el diseño.
+| Elemento | Especificación |
+|---|---|
+| Diseño base | 393 × 852 px |
+| Ancho responsive | 393 – 440 px |
+| Alto responsive | 852 – 956 px |
+| Tipografía | Inter Variable |
+| Iconografía | Lucide + SVG |
+| Paleta principal | Azul oscuro, azul primario y tonos neutros |
+| Persistencia | LocalStorage |
+
+Se utilizaron variables CSS para centralizar colores, tipografía, espaciados y radios de los componentes.
+
+La interfaz mantiene una estructura visual orientada a dispositivos móviles, con un ancho máximo de 440 px en escritorio.
+
+---
+
+## 9. Limitaciones conocidas
+
+Este proyecto representa exclusivamente la capa frontend.
+
+- No dispone de backend.
+- No utiliza una base de datos.
+- No implementa autenticación real.
+- No almacena ni verifica contraseñas.
+- No utiliza una pasarela de pagos.
+- Los métodos de pago son simulaciones.
+- Las acciones sin pantalla asociada muestran notificaciones informativas.
+
+---
+
+## 10. Recursos y créditos
+
+- **Diseño:** archivo original de Figma `ECOMMERS MOBILE.fig`.
+- **Tipografía:** Inter, distribuida bajo SIL Open Font License.
+- **Iconografía:** Lucide y recursos SVG.
+- **Imágenes:** recursos extraídos del diseño original.
+
+Este repositorio tiene fines educativos y de práctica en desarrollo frontend. Los derechos del diseño original corresponden a su respectivo autor.
+
+---
+
+**TECNOLOG**  
+*Frontend Development · HTML5 · CSS3 · JavaScript*
